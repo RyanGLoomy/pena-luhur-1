@@ -104,25 +104,4 @@
         </div>
     </div>
 
-    <!-- Mobile bottom navigation -->
-    <div class="sm:hidden fixed inset-x-0 bottom-0 z-50 bg-white border-t border-gray-200">
-        <nav class="grid grid-cols-4 text-sm">
-            <a href="{{ route('dashboard') }}"
-               class="py-3 text-center {{ request()->routeIs('dashboard') ? 'text-blue-600 font-semibold' : 'text-gray-600' }}">
-                {{ __('Dashboard') }}
-            </a>
-            <a href="{{ route('admin.books.index') }}"
-               class="py-3 text-center {{ request()->routeIs('admin.books.*') ? 'text-blue-600 font-semibold' : 'text-gray-600' }}">
-                {{ __('Buku') }}
-            </a>
-            <a href="{{ route('admin.loans.index') }}"
-               class="py-3 text-center {{ request()->routeIs('admin.loans.*') ? 'text-blue-600 font-semibold' : 'text-gray-600' }}">
-                {{ __('Peminjaman') }}
-            </a>
-            <a href="{{ route('profile.edit') }}"
-               class="py-3 text-center {{ request()->routeIs('profile.*') ? 'text-blue-600 font-semibold' : 'text-gray-600' }}">
-                {{ __('Profile') }}
-            </a>
-        </nav>
-    </div>
 </nav>

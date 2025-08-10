@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+        <title>{{ config('app.name', 'Pena Luhur') }}</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -32,7 +32,7 @@
             @include('layouts.navigation')
 
             <!-- Page Content -->
-            <main class="sm:pb-0 pb-16">
+            <main>
                 {{-- Menghapus header terpisah dan membiarkan konten utama yang mengaturnya --}}
                 {{-- Ini memberikan fleksibilitas lebih pada setiap halaman --}}
                 {{ $slot }}
