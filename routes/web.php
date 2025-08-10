@@ -1,10 +1,10 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\Admin\BookController; // Tambahkan ini
-use App\Http\Controllers\Admin\MemberController; // Tambahkan ini
-use App\Http\Controllers\Admin\LoanController; // Tambahkan ini
-use App\Http\Controllers\PublicController; // Tambahkan ini
+use App\Http\Controllers\Admin\BookController;
+use App\Http\Controllers\Admin\MemberController;
+use App\Http\Controllers\Admin\LoanController;
+use App\Http\Controllers\PublicController;
 
 // ... route lainnya
 
@@ -27,8 +27,14 @@ Route::middleware('auth')->group(function () {
         Route::resource('books', BookController::class);
         Route::resource('members', MemberController::class);
         Route::resource('loans', LoanController::class);
+
         // Route untuk pengembalian buku
         Route::patch('loans/{loan}/return', [LoanController::class, 'returnBook'])->name('loans.return');
+
+        // ===================================================================
+        // TAMBAHKAN ROUTE BARU DI SINI
+        // ===================================================================
+        Route::patch('loans/{loan}/undo-return', [LoanController::class, 'undoReturn'])->name('loans.undo_return');
     });
 });
 
