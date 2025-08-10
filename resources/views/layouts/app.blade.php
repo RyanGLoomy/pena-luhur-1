@@ -32,7 +32,7 @@
             @include('layouts.navigation')
 
             <!-- Page Content -->
-            <main>
+            <main class="sm:pb-0 pb-16">
                 {{-- Menghapus header terpisah dan membiarkan konten utama yang mengaturnya --}}
                 {{-- Ini memberikan fleksibilitas lebih pada setiap halaman --}}
                 {{ $slot }}
