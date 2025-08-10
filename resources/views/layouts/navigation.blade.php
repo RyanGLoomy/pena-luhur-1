@@ -15,6 +15,9 @@
                     <x-nav-link :href="route('admin.books.index')" :active="request()->routeIs('admin.books.*')">
                         {{ __('Buku') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('admin.members.index')" :active="request()->routeIs('admin.members.*')">
+                        {{ __('Anggota') }}
+                    </x-nav-link>
                     <x-nav-link :href="route('admin.loans.index')" :active="request()->routeIs('admin.loans.*')">
                         {{ __('Peminjaman') }}
                     </x-nav-link>
@@ -73,6 +76,9 @@
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('admin.books.index')" :active="request()->routeIs('admin.books.*')">
                 {{ __('Buku') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('admin.members.index')" :active="request()->routeIs('admin.members.*')">
+                {{ __('Anggota') }}
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('admin.loans.index')" :active="request()->routeIs('admin.loans.*')">
                 {{ __('Peminjaman') }}

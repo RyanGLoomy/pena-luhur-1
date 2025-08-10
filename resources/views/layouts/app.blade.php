@@ -38,5 +38,8 @@
                 {{ $slot }}
             </main>
         </div>
+
+        {{-- Scripts yang di-push dari halaman (mis. SweetAlert, dll) --}}
+        @stack('scripts')
     </body>
 </html>
